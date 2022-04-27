@@ -37,6 +37,9 @@ public class OAuth2Service {
                 "?client_id=" + githubAuth.getClientId() +
                 "&redirect_uri=" + githubAuth.getDomain() + "/api/oauth2/code/github?redirect=" + redirect;
     }
+    public String getFrontendUrl() {
+        return githubAuth.getFrontendDomain();
+    }
 
     public GithubOAuthUserInfo getGithubUserInfo(String code) throws OAuth2LoginFailedException {
         // 깃허브로부터 사용자 정보 조회를 위한 액세스토큰 파라미터 발급
@@ -96,12 +99,14 @@ public class OAuth2Service {
             Authority authority = Authority.builder()
                     .authorityName("ROLE_USER")
                     .build();
+
             // 생성자 안에서 username을 providerid + provider로 지정한다.
             account = oAuth2AccountRepository.saveAndFlush(OAuth2Account.builder()
                             .providerId(userInfo.getId())
                             .provider(PROVIDER)
                             .password(passwordEncoder.encode(NO_PASSWORD))
                             .nickname(userInfo.getName())
+                            .profileImage(userInfo.getAvatar_url())
                             .authorities(Collections.singleton(authority))
                             .activated(true)
                     .build());

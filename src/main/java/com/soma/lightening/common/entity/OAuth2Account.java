@@ -30,6 +30,9 @@ public class OAuth2Account {
     @Column(name = "provider_id")
     private String providerId; // oauth2 id
 
+    @Column(name = "profile_image")
+    private String profileImage;
+
     @Column(name = "token_weight")
     private Long tokenWeight; // 리프레시 토큰 가중치, // 리프레시 토큰 안에 기입된 가중치가 tokenWeight 보다 작을경우 해당 토큰은 유효하지않음
 
@@ -47,9 +50,10 @@ public class OAuth2Account {
     private Set<Authority> authorities;
 
     @Builder
-    public OAuth2Account(String password, String provider, String providerId, String nickname, Set<Authority> authorities, boolean activated) {
+    public OAuth2Account(String password, String provider, String providerId, String profileImage, String nickname, Set<Authority> authorities, boolean activated) {
         this.username = providerId + provider;
         this.password = password;
+        this.profileImage = profileImage;
 
         this.provider = provider;
         this.providerId = providerId;

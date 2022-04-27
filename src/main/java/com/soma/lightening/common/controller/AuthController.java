@@ -23,7 +23,6 @@ public class AuthController {
     public ResponseEntity<CommonResponse> authorizeGithub(String redirect) throws IOException {
         // 깃허브 로그인 화면 URL을 응답한다
         CommonResponse response = CommonResponse.builder()
-                .success(true)
                 .response(oAuth2Service.getGithubLoginUrl(redirect))
                 .build();
         return new ResponseEntity<>(response, HttpStatus.OK);
@@ -46,8 +45,8 @@ public class AuthController {
         } catch (OAuth2LoginFailedException e) {
             // OAuth 로그인 실패 시
             e.printStackTrace();
-            response.sendRedirect("http://localhost:3000"); // 기본 경로로 리다이렉트
+            response.sendRedirect(oAuth2Service.getFrontendUrl()); // 기본 경로로 리다이렉트
         }
-        response.sendRedirect("http://localhost:3000/redirect?access_token=" + accessToken + "&redirect=" + redirect);
+        response.sendRedirect(oAuth2Service.getFrontendUrl() + "/redirect?access_token=" + accessToken + "&redirect=" + redirect);
     }
 }

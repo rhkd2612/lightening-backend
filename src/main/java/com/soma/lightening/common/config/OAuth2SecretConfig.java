@@ -10,6 +10,8 @@ import org.springframework.context.annotation.Configuration;
 public class OAuth2SecretConfig {
     @Value("${oauth.domain}")
     private String domain;
+    @Value("${oauth.frontend-domain}")
+    private String frontendDomain;
     @Value("${oauth.github.clientId}")
     private String githubClientId;
     @Value("${oauth.github.secretId}")
@@ -17,6 +19,6 @@ public class OAuth2SecretConfig {
 
     @Bean
     public GithubAuth githubAuth() {
-        return new GithubAuth(domain, githubClientId, githubSecretId);
+        return new GithubAuth(domain, frontendDomain, githubClientId, githubSecretId);
     }
 }

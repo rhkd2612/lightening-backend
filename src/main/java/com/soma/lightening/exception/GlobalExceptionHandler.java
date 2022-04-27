@@ -26,7 +26,6 @@ public class GlobalExceptionHandler {
                 .build();
 
         CommonResponse response = CommonResponse.builder()
-                .success(false)
                 .error(error)
                 .build();
         return new ResponseEntity<>(response, errorCode.getStatus());
@@ -43,7 +42,6 @@ public class GlobalExceptionHandler {
                 .build();
 
         CommonResponse response = CommonResponse.builder()
-                .success(false)
                 .error(error)
                 .build();
         return new ResponseEntity<>(response, errorCode.getStatus());
@@ -60,7 +58,6 @@ public class GlobalExceptionHandler {
                 .build();
 
         CommonResponse response = CommonResponse.builder()
-                .success(false)
                 .error(error)
                 .build();
         return new ResponseEntity<>(response, errorCode.getStatus());
