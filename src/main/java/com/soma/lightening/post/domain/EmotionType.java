@@ -1,5 +1,5 @@
 package com.soma.lightening.post.domain;
 
-public enum LikeType {
+public enum EmotionType {
     PARTICIPATE, WILLING
 }

@@ -11,11 +11,11 @@ import java.util.Date;
 @Entity
 @Getter
 @Setter
-@Table(name="like")
-public class Like {
+@Table(name="emotion")
+public class Emotion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="like_id")
+    @Column(name="emotion_id")
     private Long id;
 
     @ManyToOne(fetch=FetchType.LAZY)
@@ -32,14 +32,14 @@ public class Like {
     private Post post;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "like_type")
-    private LikeType likeType; // PARTICIPATE, WILLING
+    @Column(name = "emotion_type")
+    private EmotionType emotionType; // PARTICIPATE, WILLING
 
-    public static Like newLike(OAuth2Account account, Post post, LikeType likeType) {
-        Like like = new Like();
-        like.setAccount(account);
-        like.setLikeType(likeType);
-        like.setPost(post);
-        return like;
+    public static Emotion newEmotion(OAuth2Account account, Post post, EmotionType emotionType) {
+        Emotion emotion = new Emotion();
+        emotion.setAccount(account);
+        emotion.setEmotionType(emotionType);
+        emotion.setPost(post);
+        return emotion;
     }
 }

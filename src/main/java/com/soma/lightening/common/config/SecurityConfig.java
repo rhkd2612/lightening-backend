@@ -84,7 +84,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/oauth2/code/**").permitAll() // oauth2 리다이렉션 코드 받는 경로
                 .antMatchers("/api/authenticate/**").permitAll() // 일반이든 oauth로그인 이든 경로 허용
                 .antMatchers(HttpMethod.GET, "/api/posts").permitAll() // posts get API는 경로 허용
-
                 .anyRequest().authenticated() // 나머지 경로는 jwt 인증 해야함
 
                 .and()

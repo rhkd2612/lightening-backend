@@ -21,15 +21,3 @@ spring:
         format_sql: true
 
     defer-datasource-initialization: true # hibernate ? ??? ??? ? data.sql ? ????? ??.
-
-jwt:
-  header: Authorization
-  secret: YWFhYWFhYWFhYWFhYWFhYWFhYWFhZmZmZmZmZmZmZmZmZmZzc2ZzamZza2RqZnNramRmc2tqZGZrc2pkZmtzamRmc2ZzCg== # fill in base64 [command: echo {plain_text} | base64]
-  access-token-validity-in-seconds: 6000 # 100 min
-
-oauth:
-  domain: http://localhost:8080
-  frontend-domain: http://localhost:3000
-  github:
-    clientId: 00
-    secretId: 00

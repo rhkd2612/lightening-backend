@@ -63,6 +63,11 @@ public class OAuth2Account {
         this.tokenWeight = 1L; // 초기 가중치는 1
     }
 
+    public OAuth2Account(String profileImage, String nickname) {
+        this.profileImage = profileImage;
+        this.nickname = nickname;
+    }
+
     public void increaseTokenWeight() {
         this.tokenWeight++;
     }
