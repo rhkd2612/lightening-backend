@@ -25,7 +25,7 @@ public class Post {
     private OAuth2Account account;
 
     // 주인 엔티티 - Emotion
-    @OneToMany(mappedBy="post", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy="post", cascade = CascadeType.REMOVE, fetch = FetchType.LAZY)
     private List<Emotion> emotionList = new ArrayList<>();
 
     @Enumerated(value = EnumType.STRING)

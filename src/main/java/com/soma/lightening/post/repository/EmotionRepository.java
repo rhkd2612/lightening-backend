@@ -12,5 +12,5 @@ import java.util.Optional;
 public interface EmotionRepository extends JpaRepository<Emotion, Long> {
     @EntityGraph(attributePaths = "account")
     List<Emotion> findAllByAccount_Id(Long accountId);
-    Emotion findByAccountAndPost(OAuth2Account account, Post post);
+    List<Emotion> findByAccountAndPost(OAuth2Account account, Post post);
 }
