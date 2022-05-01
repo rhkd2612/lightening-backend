@@ -1,38 +1,22 @@
-# lightening-backend
+## 밥 친구 없어? 여기서 찾아~
 
-## POST API
+### 프로젝트 링크 :
+https://unique-tartufo-15163a.netlify.app
 
-### <API URL>
-  
-  <em>url/posts</em> 전체 포스트 출력
-  
-  parameter "tag" 태그로 구분 
-  
-  <strong>MEAL, COFFEE, ALCOHOL, GAME, ETC ( 밥 커피 술 게임 기타 )</strong>
-  
-  parameter "type" 모집상태로 구분
-  
-  <strong>RECRUIT, COMPLETED ( 모집 / 모집환료 )</strong>
-  
-  parameter "page" "size" 페이징 관련 변수
+### 엘리스 링크(좋아요 부탁드려요!) :
+https://swm.elice.io/projects/gXpGvPoBzy
+(모바일 최적화되어있습니다. PC도 가능!)
 
-### < Post >
-Long postId; // 포스트 id<br>
-Long accountId; // 작성자 pk id<br>
-String accountUsername; // 작성자 아이디<br>
-String accountNickname; // 작성자 닉네임<br>
-String accountImage; <br>
-PostTag postTag; // post 태그<br>
-PostType postType; // post 모집완료상태<br>
-List<EmotionDto> emotions; // 관심/참여 인원<br>
-String postContent; // 내용<br>
-Date meetDate; // 약속 시간<br>
-Date recruitEndDate; // 게시 종료 시간<br>
-int maxCount; // 최대 인원<br>
-  
-  
-### < Emotion 참여자 >
-Long accountId; // 참여자<br>
-String accountUsername; // 참여자 아이디<br>
-EmotionType emotionType; // 참여 타입(관심, 참가)<br>
-  
+안녕하세요! 미니 프로젝트 22팀의
+"소마번개"입니다.
+
+매번 밥약, 커피팟, 놀이팟 찾으실 때마다 오픈카톡, 웹엑스로 찾기 힘드셨죠?
+
+그러한 어려움을 해결하고자 깃허브 로그인을 통한 개발자 인증 후 소마센터에서 번개 팟을 모집가능한 "소마번개"를 통해 손쉽게 일행을 구하실 수 있습니다!!
+
+"관심" 아이콘을 통해 관심 의사를 남길 수 있고, "참여" 아이콘을 통해 참가 의사를 밝힐 수 있습니다!
+게시글 스와이프를 활용한 기능 또한 제공됩니다!
+
+서버를 실제로 열어두어 지속적으로 휴대폰을 통해 사용이 가능하며 깃허브를 계정으로 사용하기에 멘토님들도 사용이 가능하십니다!
+
+꾸준한 서버의 지속을 위해 많은 좋아요 부탁드립니다!
