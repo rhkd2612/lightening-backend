@@ -33,9 +33,10 @@ public class PostRepositoryTests {
     @Test
     @Transactional
     void postSaveTest() {
-        Post post = Post.newPost(null, "오늘 오후까지", PostTag.MEAL, new Date(),"aa",1024);
-        post = postRepository.save(post);
-        System.out.println(post.getDate());
+        //Post post = Post.newPost(null, "오늘 오후까지", PostTag.MEAL, new Date(),"aa",1024);
+        //post = postRepository.save(post);
+        //System.out.println(post.getDate());
     }
+
 
 }

@@ -54,4 +54,8 @@ public class PostService {
     public Page<PostDto> findPostsByTagAndType(PostTag postTag, PostType postType, Pageable pageable){
         return postRepository.findAllByPostTagAndPostType(postTag, postType,pageable).map(p -> new PostDto(p));
     }
+
+    public Post findPostById(Long postId) {
+        return postRepository.findById(postId).get();
+    }
 }

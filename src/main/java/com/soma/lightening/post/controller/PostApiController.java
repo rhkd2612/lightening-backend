@@ -74,7 +74,24 @@ public class PostApiController {
                 writePostRequestDto.getMaxCount());
 
         return ResponseEntity.ok(CommonResponse.builder()
-                        .response("OK")
+                .response("OK")
                 .build());
     }
+
+    @DeleteMapping("/post")
+    public ResponseEntity<CommonResponse> removePost(@RequestParam(value="postId") Long postId) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+
+        Post curPost = postService.findPostById(postId);
+
+        if (curPost != null) {
+            postService.deletePost(curPost);
+        }
+
+        return ResponseEntity.ok(CommonResponse.builder()
+                .response("OK")
+                .build());
+    }
+
 }
