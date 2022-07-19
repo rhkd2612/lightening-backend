@@ -20,3 +20,9 @@ https://swm.elice.io/projects/gXpGvPoBzy
 서버를 실제로 열어두어 지속적으로 휴대폰을 통해 사용이 가능하며 깃허브를 계정으로 사용하기에 멘토님들도 사용이 가능하십니다!<br>
 
 ![image](https://user-images.githubusercontent.com/26248650/167005949-cc7dfe3f-9040-4f13-9b23-995b66817fca.png)
+
+![image](https://user-images.githubusercontent.com/26248650/179839231-b99657e3-9802-42fc-a8ce-f9089b99d97f.png)
+
+GItHub :
+frontend: https://github.com/soma-miniproject22/lightening-frontend
+backend : https://github.com/soma-miniproject22/lightening-backend
