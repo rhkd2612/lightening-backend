@@ -23,6 +23,6 @@ https://swm.elice.io/projects/gXpGvPoBzy
 
 ![image](https://user-images.githubusercontent.com/26248650/179839231-b99657e3-9802-42fc-a8ce-f9089b99d97f.png)
 
-GItHub :
-frontend: https://github.com/soma-miniproject22/lightening-frontend<br>
+GItHub : <br>
+frontend: https://github.com/soma-miniproject22/lightening-frontend <br>
 backend : https://github.com/soma-miniproject22/lightening-backend
